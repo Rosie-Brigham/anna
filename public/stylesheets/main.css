@@ -11,11 +11,20 @@ div.quote {
   align-items: center;
   flex-direction: column;
   position: relative;
-  z-index: 99
+  z-index: 99;
+  font-size: 1.75em;
 }
 
 h1 {
   text-align: center;
   padding: 10%;
   text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+  font-size: 2.5em;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  margin: 30% auto
 }
