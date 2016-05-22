@@ -3,9 +3,14 @@ var knexConfig = require('../knexfile')
 
 var knex = Knex(knexConfig[process.env.NODE_ENV || 'development'])
 
+var quotesFile = require('../data/quotes')
+
+var quotes = quotesFile[0]
+
 function random() {
- const quoteId = Math.floor((Math.random() * 119) + 1)
- var quote = knex('quotes').where('id', quoteId)
+ const quoteNum = Math.floor((Math.random() * 119) + 0)
+ const quote = quotesFile[quoteNum]
+ // var quote = knex('quotes').where('id', quoteId)
  return quote
 }
 
